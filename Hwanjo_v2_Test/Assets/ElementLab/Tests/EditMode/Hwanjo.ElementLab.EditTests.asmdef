@@ -1,0 +1,6 @@
+{
+  "name": "Hwanjo.ElementLab.EditTests",
+  "references": ["Hwanjo.ElementLab"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "includePlatforms": ["Editor"]
+}

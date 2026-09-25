@@ -1,0 +1,72 @@
+{
+  "version": "2026-09-24",
+  "reference_count": 5,
+  "note": "원본 PNG 5장. 픽셀 크기는 첨부파일 전체 크기이며, 캐릭터의 실제 48×48 그리드를 보증하지 않음. 최종 사용 권리/팀 승인은 별도 확인.",
+  "references": [
+    {
+      "id": "REF01",
+      "path": "references/element-lab-v01/Hwanjo_Reference_Character.png",
+      "source": "User upload in this conversation",
+      "role": "캐릭터 외형 기준",
+      "use": "검은 묶음머리, 붉은 목도리/스카프, 남색·아이보리 복장, 검 하나의 외형을 축약한다.",
+      "pixel_width": 767,
+      "pixel_height": 1086,
+      "mode": "RGBA",
+      "sha256": "44bf87e010f4c409ef59b51b547e3995dfa55ea5209cce02c94f2ff80a1af0f5",
+      "modified": false,
+      "runtime_asset": false
+    },
+    {
+      "id": "REF02",
+      "path": "references/element-lab-v01/Hwanjo_Reference_Stage1.png",
+      "source": "User upload in this conversation",
+      "role": "실제 화면 비율·숲 유적 분위기",
+      "use": "작은 플레이어와 지면·배경의 관계, 청록 숲·이끼·석조 구조를 참고한다. 스토리·NPC·보스는 범위 밖이다.",
+      "pixel_width": 1536,
+      "pixel_height": 1024,
+      "mode": "RGBA",
+      "sha256": "8b0e53c525df25df6437ab8ac334eb2fe2ac8935c22c4f0a1753ccd4726d8327",
+      "modified": false,
+      "runtime_asset": false
+    },
+    {
+      "id": "REF03",
+      "path": "references/element-lab-v01/Hwanjo_Reference_4Concept.png",
+      "source": "User upload in this conversation",
+      "role": "월드 색감·구조물 무드",
+      "use": "청록 숲, 차가운 절벽, 붉은 하늘, 남보라 건축 등 분위기를 참고한다. 속성 대응·4지역 제작을 확정하지 않는다.",
+      "pixel_width": 1536,
+      "pixel_height": 1024,
+      "mode": "RGBA",
+      "sha256": "de7ff641214257824dfc7dfb819e10d624d0902c5d10d48de085652abf64f969",
+      "modified": false,
+      "runtime_asset": false
+    },
+    {
+      "id": "REF04",
+      "path": "references/element-lab-v01/Hwanjo_Reference_VFX1.png",
+      "source": "User upload in this conversation",
+      "role": "불 베기 궤적·피격 표현",
+      "use": "화염 호의 밝은 중심/붉은 외곽/작은 불티, 자세의 준비-접촉-회수를 참고한다. 쌍검·3타는 사용하지 않는다.",
+      "pixel_width": 1536,
+      "pixel_height": 1024,
+      "mode": "RGBA",
+      "sha256": "4093d91bccff693f5edcbd8f84021b99eae5d5afc2b1a614400137a2a4ea0d48",
+      "modified": false,
+      "runtime_asset": false
+    },
+    {
+      "id": "REF05",
+      "path": "references/element-lab-v01/Hwanjo_Reference_VFX2.png",
+      "source": "User upload in this conversation",
+      "role": "차가운 참격·동작 강조",
+      "use": "밝은 냉색 궤적·접촉 순간 대비·회수 자세를 참고한다. 백호 대도·3타·호랑이 소환은 사용하지 않는다.",
+      "pixel_width": 1536,
+      "pixel_height": 1024,
+      "mode": "RGBA",
+      "sha256": "e161c68fcb8c95f5950ced39a7f5d57b58eddf5ae629cc425a9297139a76b113",
+      "modified": false,
+      "runtime_asset": false
+    }
+  ]
+}

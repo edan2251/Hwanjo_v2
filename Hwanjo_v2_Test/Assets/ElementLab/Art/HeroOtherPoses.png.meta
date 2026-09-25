@@ -1,0 +1,794 @@
+fileFormatVersion: 2
+guid: e8459502b3123e6439362aa99b83fe6b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9021086948043518474
+    second: HeroOtherPoses_0
+  - first:
+      213: -1442768918301096309
+    second: HeroOtherPoses_1
+  - first:
+      213: -4744634764066089684
+    second: HeroOtherPoses_2
+  - first:
+      213: 5766511147719538270
+    second: HeroOtherPoses_3
+  - first:
+      213: -7156245000556685798
+    second: HeroOtherPoses_4
+  - first:
+      213: 1853337132861854971
+    second: HeroOtherPoses_5
+  - first:
+      213: -3625006913820045995
+    second: HeroOtherPoses_6
+  - first:
+      213: -6599036462844318247
+    second: HeroOtherPoses_7
+  - first:
+      213: -7755501564358748382
+    second: HeroOtherPoses_8
+  - first:
+      213: 8858711014198207444
+    second: HeroOtherPoses_9
+  - first:
+      213: 1436617660461079450
+    second: HeroOtherPoses_10
+  - first:
+      213: 5566503968416655702
+    second: HeroOtherPoses_11
+  - first:
+      213: 3305593349063617601
+    second: HeroOtherPoses_12
+  - first:
+      213: -1245975471954088638
+    second: HeroOtherPoses_13
+  - first:
+      213: 8725179165579994972
+    second: HeroOtherPoses_14
+  - first:
+      213: -5285482373048579373
+    second: HeroOtherPoses_15
+  - first:
+      213: -1034210699161267206
+    second: HeroOtherPoses_16
+  - first:
+      213: -5364070066883424828
+    second: HeroOtherPoses_17
+  - first:
+      213: -2908626566328534942
+    second: HeroOtherPoses_18
+  - first:
+      213: 4827689595834065234
+    second: HeroOtherPoses_19
+  - first:
+      213: -1201865694443314668
+    second: HeroOtherPoses_20
+  - first:
+      213: 7689461562613753585
+    second: HeroOtherPoses_21
+  - first:
+      213: 5875079659640167589
+    second: HeroOtherPoses_22
+  - first:
+      213: 7977696265940969934
+    second: HeroOtherPoses_23
+  - first:
+      213: 2474888161873255664
+    second: HeroOtherPoses_00
+  - first:
+      213: 3601894943843755696
+    second: HeroOtherPoses_01
+  - first:
+      213: 2461309487402877283
+    second: HeroOtherPoses_02
+  - first:
+      213: -5719996936753155291
+    second: HeroOtherPoses_03
+  - first:
+      213: 5221110284441554091
+    second: HeroOtherPoses_04
+  - first:
+      213: 2753772737045783976
+    second: HeroOtherPoses_05
+  - first:
+      213: -2428806900349309683
+    second: HeroOtherPoses_06
+  - first:
+      213: 8369974859679391495
+    second: HeroOtherPoses_07
+  - first:
+      213: 7381436393423089063
+    second: HeroOtherPoses_08
+  - first:
+      213: 7424261985855139864
+    second: HeroOtherPoses_09
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeroOtherPoses_00
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fc5643bba1985220800000000000000
+      internalID: 2474888161873255664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_01
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b625162e508cf130800000000000000
+      internalID: 3601894943843755696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_02
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36182fe20f3582220800000000000000
+      internalID: 2461309487402877283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_03
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5237184871d7e90b0800000000000000
+      internalID: -5719996936753155291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_04
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac074d142c157840800000000000000
+      internalID: 5221110284441554091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_05
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5e4c7d6bd573620800000000000000
+      internalID: 2753772737045783976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_06
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d69a41ef42b4ed0800000000000000
+      internalID: -2428806900349309683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_07
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70fd322f9cf182470800000000000000
+      internalID: 8369974859679391495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_08
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7adaf129a41207660800000000000000
+      internalID: 7381436393423089063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_09
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 810f452d0f6480760800000000000000
+      internalID: 7424261985855139864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9bd5d19624efe310800000000000000
+      internalID: 1436617660461079450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_11
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 659e64eddd1304d40800000000000000
+      internalID: 5566503968416655702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14ca4de13a3dfdd20800000000000000
+      internalID: 3305593349063617601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24da353e8e765bee0800000000000000
+      internalID: -1245975471954088638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c57e80e1930161970800000000000000
+      internalID: 8725179165579994972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_15
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dac9df09c136a6b0800000000000000
+      internalID: -5285482373048579373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af3959d39deb5a1f0800000000000000
+      internalID: -1034210699161267206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_17
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cd8b19b1befe85b0800000000000000
+      internalID: -5364070066883424828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26839b96c8b72a7d0800000000000000
+      internalID: -2908626566328534942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_19
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 251e985fb166ff240800000000000000
+      internalID: 4827689595834065234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4126af6c48d125fe0800000000000000
+      internalID: -1201865694443314668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_21
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f6ec99fc8476ba60800000000000000
+      internalID: 7689461562613753585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac99fba2d9788150800000000000000
+      internalID: 5875079659640167589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroOtherPoses_23
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec92f597c7876be60800000000000000
+      internalID: 7977696265940969934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HeroOtherPoses_0: 9021086948043518474
+      HeroOtherPoses_00: 2474888161873255664
+      HeroOtherPoses_01: 3601894943843755696
+      HeroOtherPoses_02: 2461309487402877283
+      HeroOtherPoses_03: -5719996936753155291
+      HeroOtherPoses_04: 5221110284441554091
+      HeroOtherPoses_05: 2753772737045783976
+      HeroOtherPoses_06: -2428806900349309683
+      HeroOtherPoses_07: 8369974859679391495
+      HeroOtherPoses_08: 7381436393423089063
+      HeroOtherPoses_09: 7424261985855139864
+      HeroOtherPoses_1: -1442768918301096309
+      HeroOtherPoses_10: 1436617660461079450
+      HeroOtherPoses_11: 5566503968416655702
+      HeroOtherPoses_12: 3305593349063617601
+      HeroOtherPoses_13: -1245975471954088638
+      HeroOtherPoses_14: 8725179165579994972
+      HeroOtherPoses_15: -5285482373048579373
+      HeroOtherPoses_16: -1034210699161267206
+      HeroOtherPoses_17: -5364070066883424828
+      HeroOtherPoses_18: -2908626566328534942
+      HeroOtherPoses_19: 4827689595834065234
+      HeroOtherPoses_2: -4744634764066089684
+      HeroOtherPoses_20: -1201865694443314668
+      HeroOtherPoses_21: 7689461562613753585
+      HeroOtherPoses_22: 5875079659640167589
+      HeroOtherPoses_23: 7977696265940969934
+      HeroOtherPoses_3: 5766511147719538270
+      HeroOtherPoses_4: -7156245000556685798
+      HeroOtherPoses_5: 1853337132861854971
+      HeroOtherPoses_6: -3625006913820045995
+      HeroOtherPoses_7: -6599036462844318247
+      HeroOtherPoses_8: -7755501564358748382
+      HeroOtherPoses_9: 8858711014198207444
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

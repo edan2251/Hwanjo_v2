@@ -1,0 +1,6 @@
+{
+  "name": "Hwanjo.ElementLab",
+  "rootNamespace": "Hwanjo.ElementLab",
+  "references": ["Unity.InputSystem"],
+  "autoReferenced": true
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Hwanjo.ElementLab.Editor",
+  "references": ["Hwanjo.ElementLab"],
+  "includePlatforms": ["Editor"]
+}

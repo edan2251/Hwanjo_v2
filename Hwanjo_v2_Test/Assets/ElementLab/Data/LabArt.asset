@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4132790a8cd2d428ad1f2f5c8e68ec, type: 3}
+  m_Name: LabArt
+  m_EditorClassIdentifier: Hwanjo.ElementLab::Hwanjo.ElementLab.LabArtLibrary
+  Background: {fileID: 21300000, guid: 5f5251db221cf2e46a78011e230f3947, type: 3}
+  Poses:
+  - Name: Run
+    Frames:
+    - {fileID: -2868013085283613736, guid: 79f34035bd5eb834dba3153cf7011b5a, type: 3}
+    - {fileID: 6887698526967953830, guid: 79f34035bd5eb834dba3153cf7011b5a, type: 3}
+    - {fileID: 6972571948492752647, guid: 79f34035bd5eb834dba3153cf7011b5a, type: 3}
+    - {fileID: 787511850523377665, guid: 79f34035bd5eb834dba3153cf7011b5a, type: 3}
+    - {fileID: 1864050753315687996, guid: 79f34035bd5eb834dba3153cf7011b5a, type: 3}
+    - {fileID: -2448124443740837207, guid: 79f34035bd5eb834dba3153cf7011b5a, type: 3}
+  - Name: Slash
+    Frames:
+    - {fileID: -9196176646672862094, guid: 79f34035bd5eb834dba3153cf7011b5a, type: 3}
+    - {fileID: 3654880144936641964, guid: 79f34035bd5eb834dba3153cf7011b5a, type: 3}
+    - {fileID: -3077044647068216820, guid: 79f34035bd5eb834dba3153cf7011b5a, type: 3}
+    - {fileID: 5209555456949020670, guid: 79f34035bd5eb834dba3153cf7011b5a, type: 3}
+    - {fileID: -3412280613527257725, guid: 79f34035bd5eb834dba3153cf7011b5a, type: 3}
+    - {fileID: -1681536084146803403, guid: 79f34035bd5eb834dba3153cf7011b5a, type: 3}
+  - Name: Idle
+    Frames:
+    - {fileID: 2474888161873255664, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: 3601894943843755696, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: 2461309487402877283, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: -5719996936753155291, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+  - Name: Jump
+    Frames:
+    - {fileID: 5221110284441554091, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+  - Name: Fall
+    Frames:
+    - {fileID: 2753772737045783976, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+  - Name: Dash
+    Frames:
+    - {fileID: -2428806900349309683, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: 8369974859679391495, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+  - Name: Charge
+    Frames:
+    - {fileID: 7381436393423089063, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: 7424261985855139864, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+  - Name: Hit
+    Frames:
+    - {fileID: 1436617660461079450, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: 5566503968416655702, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+  - Name: ChargeRelease
+    Frames:
+    - {fileID: 7381436393423089063, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: 7424261985855139864, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: -1245975471954088638, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: -5285482373048579373, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: -1034210699161267206, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: -5364070066883424828, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+  - Name: Death
+    Frames:
+    - {fileID: -2908626566328534942, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: 4827689595834065234, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: -1201865694443314668, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: 7689461562613753585, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: 5875079659640167589, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}
+    - {fileID: 7977696265940969934, guid: e8459502b3123e6439362aa99b83fe6b, type: 3}

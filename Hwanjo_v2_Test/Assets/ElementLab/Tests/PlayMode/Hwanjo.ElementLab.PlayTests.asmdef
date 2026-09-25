@@ -1,0 +1,5 @@
+{
+  "name": "Hwanjo.ElementLab.PlayTests",
+  "references": ["Hwanjo.ElementLab", "Unity.InputSystem", "Unity.InputSystem.TestFramework"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

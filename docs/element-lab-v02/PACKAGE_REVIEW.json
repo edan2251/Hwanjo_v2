@@ -1,0 +1,56 @@
+{
+  "kind": "prompt_and_specification_only",
+  "project": "Hwanjo_v2",
+  "version": "Element Lab v0.2",
+  "date": "2026-09-25",
+  "contains": "six Markdown documents; no fonts, runtime assets, game code, or launcher",
+  "user_decision": "Charge range = 1R (same as normal slash)",
+  "recommended_trial": "Four-direction attacks; 360-degree aim is not included",
+  "verified": [
+    "all six files present",
+    "local Markdown links resolve",
+    "code fences paired",
+    "UTF-8 without BOM",
+    "no trailing whitespace",
+    "ZIP roundtrip hashes match"
+  ],
+  "not_verified": [
+    "user local source code",
+    "Unity compilation/tests/runtime",
+    "gameplay feel",
+    "produced game art",
+    "Windows command execution"
+  ],
+  "files": [
+    {
+      "path": "docs/element-lab-v02/00_README.md",
+      "sha256": "6fc5c969723a8c7597e52dbc3c745373ec6b128a983c5dc514437a9045fc8107",
+      "bytes": 6572
+    },
+    {
+      "path": "docs/element-lab-v02/01_GAMEPLAY_AND_REACTIONS.md",
+      "sha256": "47e191c9efd34480a3e2c1ff6217b550d9907ba40e7754761efb5761a006d791",
+      "bytes": 12278
+    },
+    {
+      "path": "docs/element-lab-v02/02_EXPLORATION.md",
+      "sha256": "a52ff2bd4afa871c069b4c7d512af0aa5b1e33c29afa344a8696c5a3915a91e1",
+      "bytes": 7254
+    },
+    {
+      "path": "docs/element-lab-v02/03_ART_AND_CAMERA.md",
+      "sha256": "08891a54761cd5747c9c89744bbb90f5a6e5d3fb4e09653e325816aa48eb1b89",
+      "bytes": 10092
+    },
+    {
+      "path": "docs/element-lab-v02/04_CODEX_IMPLEMENT.md",
+      "sha256": "6490e5b66662c700f3f37f85145471de4ba6d22ccbb405d0b857f42a121f1e32",
+      "bytes": 9711
+    },
+    {
+      "path": "docs/element-lab-v02/05_QA.md",
+      "sha256": "653472d966bce4d86bd4fb8da570165b8b68dbbab3c43fd11f3351cf0799f17a",
+      "bytes": 7619
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f504b5e1e57b604793aabcf0b86c6a6, type: 3}
+  m_Name: LabTuning
+  m_EditorClassIdentifier: Hwanjo.ElementLab::Hwanjo.ElementLab.LabTuning
+  Range: 1.6
+  MoveSpeed: 4.2
+  JumpSpeed: 8.5
+  Gravity: 23
+  DashSpeed: 11
+  DashSeconds: 0.16
+  DashCooldown: 0.55
+  SingleWindup: 0.06
+  ActiveSeconds: 0.06
+  SingleRecovery: 0.2
+  ChargeWindup: 0.08
+  ChargeRecovery: 0.28
+  SwordDamage: 10
+  PlayerHealth: 100
+  EnemyHealth: 100
+  TraceSeconds: 2
+  TraceCenterR: 0.875
+  TraceWidthR: 0.25
+  TraceHeight: 1.1
+  TransportRangeR: 3
+  TransportSpeed: 8
+  IceSupportDistanceR: 0.5
+  IceThicknessR: 0.15
+  EnemySpeed: 1.2
+  EnemyWindup: 0.65
+  EnemyActive: 0.1
+  EnemyRecovery: 0.75
+  EnemyRange: 1.15
+  EnemyDamage: 8
+  PushSpeed: 4.8
+  PushLift: 2.4
+  HitStop: 0.045
+  HitFlash: 0.1
+  CameraShake: 0.045
+  Status:
+    BurnSeconds: 3
+    BurnTick: 0.5
+    WetSeconds: 2
+    FreezeSeconds: 0.8
+    RefreezeDelay: 0.6
+    WindDelay: 0.5
+    WetSpeed: 0.8
+    BurnDamage: 2
