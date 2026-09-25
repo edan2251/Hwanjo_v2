@@ -9,6 +9,7 @@ namespace Hwanjo.ElementLab
         public float ExpiresAt { get; private set; }
         public bool Flying { get; private set; }
         public bool Platform { get; private set; }
+        public bool SolidIce { get; private set; }
         public string Note { get; private set; } = "다른 속성으로 재타격";
         public bool Active => Target && Target.gameObject.activeSelf;
         public Vector2 Position => Target ? (Vector2)Target.transform.position + Vector2.up * Target.Size.y / 2 : Vector2.zero;
@@ -17,18 +18,21 @@ namespace Hwanjo.ElementLab
         readonly LabWorld world;
         readonly long createdBy;
         ActionContext lineage;
-        float direction;
+        Vector2 direction;
         SpriteRenderer symbol;
-        public TraceSlot(LabWorld world, Element element, Vector2 center, long createdBy)
+        public TraceSlot(LabWorld world, Element element, Vector2 center, long createdBy, Vector2 direction)
         {
             this.world = world; this.createdBy = createdBy; Element = element; ExpiresAt = world.Clock + world.Tuning.TraceSeconds;
-            var go = new GameObject("Trace · one shared slot"); go.transform.SetParent(world.transform); go.transform.position = center - Vector2.up * world.Tuning.TraceHeight / 2;
+            this.direction = direction;
+            Vector2 size = AttackDirections.AreaSize(direction, world.Tuning.TraceWidthR * world.Tuning.Range, world.Tuning.TraceHeight);
+            var go = new GameObject("Trace · one shared slot"); go.transform.SetParent(world.transform); go.transform.position = center - Vector2.up * size.y / 2;
             var profile = Profile(element); var state = State(element);
-            Target = go.AddComponent<LabTarget>(); Target.Initialize(world, TargetKind.Trace, "검흔", profile, state, new Vector2(world.Tuning.TraceWidthR * world.Tuning.Range, world.Tuning.TraceHeight)); Target.Trace = this;
+            Target = go.AddComponent<LabTarget>(); Target.Initialize(world, TargetKind.Trace, "검흔", profile, state, size); Target.Trace = this;
             Target.Body.enabled = false; Target.SolidCollider.enabled = false;
             symbol = LabSprites.Quad("Trace core", go.transform, new Vector2(0, Target.Size.y / 2), new Vector2(.08f, .92f), LabSprites.ElementColor(element), 22);
             symbol.transform.localRotation = Quaternion.Euler(0, 0, -17);
-            if (element == Element.Ice) UpdatePlatform();
+            symbol.sprite=LabSprites.TraceGlyph(Element,false);
+            if (element == Element.Ice) Note = "냉기 흔적 · 발판 아님 · 열을 가하면 소멸";
         }
         static TargetProfile Profile(Element element)
         {
@@ -46,10 +50,14 @@ namespace Hwanjo.ElementLab
             else if (Flying) reason = "Unsupported:InFlight";
             else if (ReactionRules.Of(Element) == effect) reason = "Unsupported:SameElement";
             else if (Element == Element.Wind) reason = "Unsupported:WindCombination";
+            else if (TraceSupport.Get(Element, SolidIce, TraceSupport.FromEffect(effect)) == TraceResponse.Keep) reason = "Keep";
+            else if (TraceSupport.Get(Element, SolidIce, TraceSupport.FromEffect(effect)) == TraceResponse.Unsupported) reason = "Unsupported:TraceCombination";
             return reason.Length == 0;
         }
-        public void React(Reaction r, ActionContext action, float hitDirection)
+        public void React(Reaction r, ActionContext action, Vector2 hitDirection)
         {
+            if(r.Applied)world.Session?.TraceRehit();
+            if (r.Consequence == Consequence.Thaw && !SolidIce) { End(); return; }
             if (r.Consequence == Consequence.Extinguish && Element == Element.Fire) { End(); return; }
             if (r.Consequence == Consequence.Transport)
             {
@@ -57,9 +65,9 @@ namespace Hwanjo.ElementLab
                 Note = "바람 전달 · 첫 접촉에서 종료";
             }
             if (r.Consequence == Consequence.Freeze)
-            { Element = Element.Ice; Target.Model.ChangeProfilePreservingState(Profile(Element)); UpdatePlatform(); }
+            { Element = Element.Ice; SolidIce = true; Target.Model.ChangeProfilePreservingState(Profile(Element)); UpdatePlatform(); }
             if (r.Consequence == Consequence.Thaw)
-            { Element = Element.Water; Target.Model.ChangeProfilePreservingState(Profile(Element)); Platform = false; Target.SolidCollider.enabled = false; Note = "해동 · 최초 만료시각 유지"; }
+            { Element = Element.Water; SolidIce = false; Target.Model.ChangeProfilePreservingState(Profile(Element)); Platform = false; Target.SolidCollider.enabled = false; Note = "해동 · 최초 만료시각 유지"; }
             if (symbol) symbol.color = LabSprites.ElementColor(Element);
         }
         void UpdatePlatform()
@@ -83,12 +91,13 @@ namespace Hwanjo.ElementLab
             if (!Active) return;
             if (world.Clock >= ExpiresAt) { End(); return; }
             symbol.color = new Color(LabSprites.ElementColor(Element).r, LabSprites.ElementColor(Element).g, LabSprites.ElementColor(Element).b, Mathf.Clamp01(Remaining * 3));
-            if (Element == Element.Ice) { symbol.transform.localRotation = Quaternion.identity; symbol.transform.localScale = new Vector3(.65f * world.Tuning.Range, world.Tuning.IceThicknessR * world.Tuning.Range, 1); }
-            else { symbol.transform.localRotation = Quaternion.Euler(0, 0, Flying ? 90 : -17); symbol.transform.localScale = new Vector3(.09f, Flying ? .7f : .92f, 1); }
+            symbol.sprite=LabSprites.TraceGlyph(Element,SolidIce&&Platform);
+            if (SolidIce && Platform) { symbol.transform.localRotation = Quaternion.identity; symbol.transform.localScale = new Vector3(.65f * world.Tuning.Range, world.Tuning.IceThicknessR * world.Tuning.Range, 1); }
+            else { symbol.transform.localRotation = Quaternion.identity;Vector2 size=AttackDirections.AreaSize(direction,.38f,.65f);symbol.transform.localScale = new Vector3(size.x,size.y,1); }
             if (world.Clock % .09f < dt) world.Particle(Position, Element, .35f);
             if (!Flying || dt <= 0) return;
             float step = Mathf.Min(world.Tuning.TransportSpeed * dt, world.Tuning.TransportRangeR * world.Tuning.Range - Traveled);
-            var hits = Physics2D.CircleCastAll(Position, .10f, Vector2.right * direction, step);
+            var hits = Physics2D.CircleCastAll(Position, .10f, direction, step);
             System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
             foreach (var hit in hits)
             {
@@ -98,7 +107,7 @@ namespace Hwanjo.ElementLab
                 { lineage.Source = "TraceTransport"; target.Receive(lineage, ReactionRules.Of(Element), 0, direction); End(); return; }
                 if (!hit.collider.isTrigger && hit.collider.GetComponent<LabSurface>()) { End(); return; }
             }
-            Target.transform.position += Vector3.right * (direction * step); Traveled += step; Physics2D.SyncTransforms();
+            Target.transform.position += (Vector3)(direction * step); Traveled += step; Physics2D.SyncTransforms();
             if (Traveled >= world.Tuning.TransportRangeR * world.Tuning.Range - .0001f) End();
         }
         public void End()

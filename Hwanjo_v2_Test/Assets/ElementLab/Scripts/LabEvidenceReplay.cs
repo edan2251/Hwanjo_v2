@@ -23,7 +23,7 @@ namespace Hwanjo.ElementLab
             Send(Key.Digit2); yield return null; Send(Key.J); yield return new WaitForSeconds(.7f);
             Check(world.ActionCount == 0, "hold does not attack"); Send(); yield return new WaitForSeconds(.19f);
             Check(world.ActionCount == 1 && world.Trace != null && world.Trace.Active, "one charge produces one trace");
-            Check(Mathf.Abs(world.LastAttackReach - world.Tuning.Range * 1.75f) < .001f, "charge is 1.75R");
+            Check(Mathf.Abs(world.LastAttackReach - world.Tuning.Range) < .001f, "charge is 1R");
             float expiry = world.Trace.ExpiresAt;
             yield return new WaitForSeconds(.27f);
             Send(Key.Digit4, Key.J); yield return new WaitForSeconds(.06f); Send(); yield return new WaitForSeconds(.16f);

@@ -32,7 +32,7 @@ namespace Hwanjo.ElementLab.Editor
         {
             Prepare();
             string repo = Directory.GetParent(Application.dataPath).Parent.FullName;
-            string output = Path.Combine(repo, "Builds/ElementLabV01/HwanjoElementLab.exe"); Directory.CreateDirectory(Path.GetDirectoryName(output));
+            string output = Path.Combine(repo, "Builds/ElementLabV02/HwanjoElementLab.exe"); Directory.CreateDirectory(Path.GetDirectoryName(output));
             var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions { scenes = new[] { ScenePath }, locationPathName = output, target = BuildTarget.StandaloneWindows64, options = BuildOptions.None });
             Debug.Log("ELEMENT_LAB_BUILD " + report.summary.result + " | errors=" + report.summary.totalErrors + " warnings=" + report.summary.totalWarnings + " bytes=" + report.summary.totalSize + " output=" + output);
             if (report.summary.result != BuildResult.Succeeded) throw new Exception("Windows build failed: " + report.summary.result);

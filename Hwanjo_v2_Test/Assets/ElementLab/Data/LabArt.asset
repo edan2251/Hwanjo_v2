@@ -13,6 +13,75 @@ MonoBehaviour:
   m_Name: LabArt
   m_EditorClassIdentifier: Hwanjo.ElementLab::Hwanjo.ElementLab.LabArtLibrary
   Background: {fileID: 21300000, guid: 5f5251db221cf2e46a78011e230f3947, type: 3}
+  Sword: {fileID: 21300000, guid: e673515d757e79548aadcf6b6f2d01fe, type: 3}
+  Far: {fileID: 21300000, guid: 12fb416406149ff488fd823dcb6bd9cd, type: 3}
+  Middle: {fileID: 21300000, guid: e196ac8bc34deb74d8485ca1d49df373, type: 3}
+  Terrain:
+  - {fileID: 21300000, guid: 3a840e69d8c9a5746ae8128d025d3239, type: 3}
+  - {fileID: 21300000, guid: ae1c52cd0b5e1d4478f2dfdac04d9a6a, type: 3}
+  - {fileID: 21300000, guid: f3641c355a96fd04ca0b826502613477, type: 3}
+  - {fileID: 21300000, guid: 26df2578f9aef58409849f2e7d925bc1, type: 3}
+  - {fileID: 21300000, guid: 56b2787b04486ff439a837198d5d2389, type: 3}
+  - {fileID: 21300000, guid: 664cfa37c815ea443b8d54fec7d52010, type: 3}
+  - {fileID: 21300000, guid: a02e2bcc5f81a014ab7c75a643769e11, type: 3}
+  - {fileID: 21300000, guid: 67296b1b482e64f42944c460bb92339d, type: 3}
+  Directional:
+  - Name: SlashHorizontal
+    Frames:
+    - {fileID: 4635861247020507889, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: 4160524258396013369, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -546366208973684347, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -6495727153529399973, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -1119667104530380219, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -2525811522614514236, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+  - Name: SlashUp
+    Frames:
+    - {fileID: 5345404488962234542, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -5673595805101060362, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: 5573687353680524731, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -2624975304594538013, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -5502245932687245605, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -4361657738939333611, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+  - Name: SlashDown
+    Frames:
+    - {fileID: -7730652791826676756, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -1291331352835573480, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: 2553347915308382622, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: 5267235234805445873, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: 241938215253357105, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -8336607749327375180, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+  - Name: ChargeHorizontal
+    Frames:
+    - {fileID: -354599513090795315, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -6991468646355651456, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -2424637961751402823, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: 4280740264761711940, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -7000124063629696166, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: 6844261589701655537, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+  - Name: ChargeUp
+    Frames:
+    - {fileID: 6459623321122086273, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -4655424734611245661, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: 5566638154569876201, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: 1196300673791964289, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -5786967084577528730, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: 5314354057465564359, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+  - Name: ChargeDown
+    Frames:
+    - {fileID: -4166880976681844250, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: 348624707676414876, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: 6448793979504093835, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -4991778254913052743, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: -7481731699788714364, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+    - {fileID: 5617903166545590333, guid: 3ff32daed9134a84eb55188ca9a0c3c3, type: 3}
+  - Name: AirDown
+    Frames:
+    - {fileID: -2383232433338801711, guid: 61b2fe0fd5a171f43bc8e818e3f89e4f, type: 3}
+    - {fileID: 4352808970742471762, guid: 61b2fe0fd5a171f43bc8e818e3f89e4f, type: 3}
+    - {fileID: -2459893189603232530, guid: 61b2fe0fd5a171f43bc8e818e3f89e4f, type: 3}
+    - {fileID: -1035499268037497780, guid: 61b2fe0fd5a171f43bc8e818e3f89e4f, type: 3}
+    - {fileID: 7172586049351578547, guid: 61b2fe0fd5a171f43bc8e818e3f89e4f, type: 3}
+    - {fileID: 7161671742320886950, guid: 61b2fe0fd5a171f43bc8e818e3f89e4f, type: 3}
   Poses:
   - Name: Run
     Frames:

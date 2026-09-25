@@ -31,6 +31,10 @@ namespace Hwanjo.ElementLab
             switch (e.keyCode)
             {
                 case KeyCode.A: key = Key.A; break; case KeyCode.D: key = Key.D; break;
+                case KeyCode.W: key = Key.W; break; case KeyCode.S: key = Key.S; break;
+                case KeyCode.UpArrow: key = Key.UpArrow; break; case KeyCode.DownArrow: key = Key.DownArrow; break;
+                case KeyCode.M: key = Key.M; break; case KeyCode.E: key = Key.E; break;
+                case KeyCode.F4: key = Key.F4; break; case KeyCode.F5: key = Key.F5; break; case KeyCode.F6: key = Key.F6; break;
                 case KeyCode.LeftArrow: key = Key.LeftArrow; break; case KeyCode.RightArrow: key = Key.RightArrow; break;
                 case KeyCode.J: key = Key.J; break; case KeyCode.R: key = Key.R; break;
                 case KeyCode.Space: key = Key.Space; break; case KeyCode.LeftShift: key = Key.LeftShift; break; case KeyCode.RightShift: key = Key.RightShift; break;

@@ -1,0 +1,1214 @@
+fileFormatVersion: 2
+guid: 3ff32daed9134a84eb55188ca9a0c3c3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5019925654784774202
+    second: HeroDirections_0
+  - first:
+      213: 8046009602330374853
+    second: HeroDirections_1
+  - first:
+      213: 8014940488544617766
+    second: HeroDirections_2
+  - first:
+      213: -2675657950795433497
+    second: HeroDirections_3
+  - first:
+      213: -4353100471628294556
+    second: HeroDirections_4
+  - first:
+      213: 5792135772180382956
+    second: HeroDirections_5
+  - first:
+      213: -3174246214328864307
+    second: HeroDirections_6
+  - first:
+      213: -81095288265502040
+    second: HeroDirections_7
+  - first:
+      213: 8100377989432142304
+    second: HeroDirections_8
+  - first:
+      213: -3643970934996043791
+    second: HeroDirections_9
+  - first:
+      213: -3166256053166282682
+    second: HeroDirections_10
+  - first:
+      213: 8682915300503566602
+    second: HeroDirections_11
+  - first:
+      213: 316797100094033909
+    second: HeroDirections_12
+  - first:
+      213: 5861570866427744796
+    second: HeroDirections_13
+  - first:
+      213: 851028507345922241
+    second: HeroDirections_14
+  - first:
+      213: 740228655777775602
+    second: HeroDirections_15
+  - first:
+      213: -6458022918277500365
+    second: HeroDirections_16
+  - first:
+      213: -8449418397535241572
+    second: HeroDirections_17
+  - first:
+      213: -2042246650722418199
+    second: HeroDirections_18
+  - first:
+      213: 3631192845242685071
+    second: HeroDirections_19
+  - first:
+      213: -8016731877054751302
+    second: HeroDirections_20
+  - first:
+      213: 1364640275211026877
+    second: HeroDirections_21
+  - first:
+      213: -2190022803528255551
+    second: HeroDirections_22
+  - first:
+      213: -3109753452467404811
+    second: HeroDirections_23
+  - first:
+      213: -2387840092055588351
+    second: HeroDirections_24
+  - first:
+      213: -2210667076234951963
+    second: HeroDirections_25
+  - first:
+      213: -7678068521554865079
+    second: HeroDirections_26
+  - first:
+      213: 6048043238374940477
+    second: HeroDirections_27
+  - first:
+      213: 6245431209416523431
+    second: HeroDirections_28
+  - first:
+      213: 4205938152464551630
+    second: HeroDirections_29
+  - first:
+      213: -7546561480928681146
+    second: HeroDirections_30
+  - first:
+      213: -3721106271883150111
+    second: HeroDirections_31
+  - first:
+      213: -135324404635634025
+    second: HeroDirections_32
+  - first:
+      213: -4015781669516666864
+    second: HeroDirections_33
+  - first:
+      213: 3747641562904538240
+    second: HeroDirections_34
+  - first:
+      213: 3591775792436071745
+    second: HeroDirections_35
+  - first:
+      213: -1364610847237019177
+    second: HeroDirections_36
+  - first:
+      213: 4635861247020507889
+    second: Direction_00
+  - first:
+      213: 4160524258396013369
+    second: Direction_01
+  - first:
+      213: -546366208973684347
+    second: Direction_02
+  - first:
+      213: -6495727153529399973
+    second: Direction_03
+  - first:
+      213: -1119667104530380219
+    second: Direction_04
+  - first:
+      213: -2525811522614514236
+    second: Direction_05
+  - first:
+      213: 5345404488962234542
+    second: Direction_06
+  - first:
+      213: -5673595805101060362
+    second: Direction_07
+  - first:
+      213: 5573687353680524731
+    second: Direction_08
+  - first:
+      213: -2624975304594538013
+    second: Direction_09
+  - first:
+      213: -5502245932687245605
+    second: Direction_10
+  - first:
+      213: -4361657738939333611
+    second: Direction_11
+  - first:
+      213: -7730652791826676756
+    second: Direction_12
+  - first:
+      213: -1291331352835573480
+    second: Direction_13
+  - first:
+      213: 2553347915308382622
+    second: Direction_14
+  - first:
+      213: 5267235234805445873
+    second: Direction_15
+  - first:
+      213: 241938215253357105
+    second: Direction_16
+  - first:
+      213: -8336607749327375180
+    second: Direction_17
+  - first:
+      213: -354599513090795315
+    second: Direction_18
+  - first:
+      213: -6991468646355651456
+    second: Direction_19
+  - first:
+      213: -2424637961751402823
+    second: Direction_20
+  - first:
+      213: 4280740264761711940
+    second: Direction_21
+  - first:
+      213: -7000124063629696166
+    second: Direction_22
+  - first:
+      213: 6844261589701655537
+    second: Direction_23
+  - first:
+      213: 6459623321122086273
+    second: Direction_24
+  - first:
+      213: -4655424734611245661
+    second: Direction_25
+  - first:
+      213: 5566638154569876201
+    second: Direction_26
+  - first:
+      213: 1196300673791964289
+    second: Direction_27
+  - first:
+      213: -5786967084577528730
+    second: Direction_28
+  - first:
+      213: 5314354057465564359
+    second: Direction_29
+  - first:
+      213: -4166880976681844250
+    second: Direction_30
+  - first:
+      213: 348624707676414876
+    second: Direction_31
+  - first:
+      213: 6448793979504093835
+    second: Direction_32
+  - first:
+      213: -4991778254913052743
+    second: Direction_33
+  - first:
+      213: -7481731699788714364
+    second: Direction_34
+  - first:
+      213: 5617903166545590333
+    second: Direction_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Direction_00
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f228a80e33e55040800000000000000
+      internalID: 4635861247020507889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_01
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 240
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 933071505c62db930800000000000000
+      internalID: 4160524258396013369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_02
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 240
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 581c8d4e3daea68f0800000000000000
+      internalID: -546366208973684347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_03
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 240
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b555508d19a8ad5a0800000000000000
+      internalID: -6495727153529399973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_04
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 240
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ac6cf53b42670f0800000000000000
+      internalID: -1119667104530380219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_05
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cd29f07dc382fcd0800000000000000
+      internalID: -2525811522614514236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_06
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea85f51cf01be2a40800000000000000
+      internalID: 5345404488962234542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_07
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe0ecddca65341b0800000000000000
+      internalID: -5673595805101060362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_08
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb5f6351e17b95d40800000000000000
+      internalID: 5573687353680524731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_09
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e148714ed6329bd0800000000000000
+      internalID: -2624975304594538013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdeb653f97814a3b0800000000000000
+      internalID: -5502245932687245605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_11
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51400be35674873c0800000000000000
+      internalID: -4361657738939333611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce30a4d9e3437b490800000000000000
+      internalID: -7730652791826676756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81939e2f9f4441ee0800000000000000
+      internalID: -1291331352835573480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99b0f796605f6320800000000000000
+      internalID: 2553347915308382622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_15
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f4fffef98af81940800000000000000
+      internalID: 5267235234805445873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132b4c166898b5300800000000000000
+      internalID: 241938215253357105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_17
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b4b295db6b6e4c80800000000000000
+      internalID: -8336607749327375180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc852b02f95341bf0800000000000000
+      internalID: -354599513090795315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_19
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084b0bbfe4059fe90800000000000000
+      internalID: -6991468646355651456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b661ecbe94f95ed0800000000000000
+      internalID: -2424637961751402823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_21
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44d55d8279e386b30800000000000000
+      internalID: 4280740264761711940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5320bb90409ade90800000000000000
+      internalID: -7000124063629696166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_23
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fb740447a3bbfe50800000000000000
+      internalID: 6844261589701655537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d9f4e9f2135a950800000000000000
+      internalID: 6459623321122086273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_25
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a5fdee8edb946fb0800000000000000
+      internalID: -4655424734611245661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_26
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e2064488eba04d40800000000000000
+      internalID: 5566638154569876201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_27
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1843ee1ef1d1a9010800000000000000
+      internalID: 1196300673791964289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_28
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664e0e4e81090bfa0800000000000000
+      internalID: -5786967084577528730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_29
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc04edcbd060c940800000000000000
+      internalID: 5314354057465564359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e1cb8b24d34c26c0800000000000000
+      internalID: -4166880976681844250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_31
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c932af4135096d400800000000000000
+      internalID: 348624707676414876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_32
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ae40a05f7be7950800000000000000
+      internalID: 6448793979504093835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_33
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf536eef14a9bab0800000000000000
+      internalID: -4991778254913052743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_34
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e6051b8ac8b2890800000000000000
+      internalID: -7481731699788714364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Direction_35
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d38fd704a2dc6fd40800000000000000
+      internalID: 5617903166545590333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Direction_00: 4635861247020507889
+      Direction_01: 4160524258396013369
+      Direction_02: -546366208973684347
+      Direction_03: -6495727153529399973
+      Direction_04: -1119667104530380219
+      Direction_05: -2525811522614514236
+      Direction_06: 5345404488962234542
+      Direction_07: -5673595805101060362
+      Direction_08: 5573687353680524731
+      Direction_09: -2624975304594538013
+      Direction_10: -5502245932687245605
+      Direction_11: -4361657738939333611
+      Direction_12: -7730652791826676756
+      Direction_13: -1291331352835573480
+      Direction_14: 2553347915308382622
+      Direction_15: 5267235234805445873
+      Direction_16: 241938215253357105
+      Direction_17: -8336607749327375180
+      Direction_18: -354599513090795315
+      Direction_19: -6991468646355651456
+      Direction_20: -2424637961751402823
+      Direction_21: 4280740264761711940
+      Direction_22: -7000124063629696166
+      Direction_23: 6844261589701655537
+      Direction_24: 6459623321122086273
+      Direction_25: -4655424734611245661
+      Direction_26: 5566638154569876201
+      Direction_27: 1196300673791964289
+      Direction_28: -5786967084577528730
+      Direction_29: 5314354057465564359
+      Direction_30: -4166880976681844250
+      Direction_31: 348624707676414876
+      Direction_32: 6448793979504093835
+      Direction_33: -4991778254913052743
+      Direction_34: -7481731699788714364
+      Direction_35: 5617903166545590333
+      HeroDirections_0: -5019925654784774202
+      HeroDirections_1: 8046009602330374853
+      HeroDirections_10: -3166256053166282682
+      HeroDirections_11: 8682915300503566602
+      HeroDirections_12: 316797100094033909
+      HeroDirections_13: 5861570866427744796
+      HeroDirections_14: 851028507345922241
+      HeroDirections_15: 740228655777775602
+      HeroDirections_16: -6458022918277500365
+      HeroDirections_17: -8449418397535241572
+      HeroDirections_18: -2042246650722418199
+      HeroDirections_19: 3631192845242685071
+      HeroDirections_2: 8014940488544617766
+      HeroDirections_20: -8016731877054751302
+      HeroDirections_21: 1364640275211026877
+      HeroDirections_22: -2190022803528255551
+      HeroDirections_23: -3109753452467404811
+      HeroDirections_24: -2387840092055588351
+      HeroDirections_25: -2210667076234951963
+      HeroDirections_26: -7678068521554865079
+      HeroDirections_27: 6048043238374940477
+      HeroDirections_28: 6245431209416523431
+      HeroDirections_29: 4205938152464551630
+      HeroDirections_3: -2675657950795433497
+      HeroDirections_30: -7546561480928681146
+      HeroDirections_31: -3721106271883150111
+      HeroDirections_32: -135324404635634025
+      HeroDirections_33: -4015781669516666864
+      HeroDirections_34: 3747641562904538240
+      HeroDirections_35: 3591775792436071745
+      HeroDirections_36: -1364610847237019177
+      HeroDirections_4: -4353100471628294556
+      HeroDirections_5: 5792135772180382956
+      HeroDirections_6: -3174246214328864307
+      HeroDirections_7: -81095288265502040
+      HeroDirections_8: 8100377989432142304
+      HeroDirections_9: -3643970934996043791
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

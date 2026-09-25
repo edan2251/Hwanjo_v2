@@ -28,9 +28,9 @@ MonoBehaviour:
   PlayerHealth: 100
   EnemyHealth: 100
   TraceSeconds: 2
-  TraceCenterR: 0.875
+  TraceCenterR: 0.6
   TraceWidthR: 0.25
-  TraceHeight: 1.1
+  TraceHeight: 0.8
   TransportRangeR: 3
   TransportSpeed: 8
   IceSupportDistanceR: 0.5

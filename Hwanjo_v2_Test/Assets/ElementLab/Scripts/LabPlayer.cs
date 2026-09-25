@@ -12,6 +12,10 @@ namespace Hwanjo.ElementLab
         public float Health { get; private set; }
         public bool Alive => Health > 0;
         public int Facing { get; private set; } = 1;
+        public SlashDirection Direction { get; private set; } = SlashDirection.Right;
+        public SlashDirection PreviewDirection => AttackDirections.Read(Facing);
+        public Vector2 LockedDirection => Direction.Vector();
+        public Element LockedElement => attackElement;
         public int AttackCount { get; private set; }
         public AttackKind CurrentAttack { get; private set; }
         public float AttackProgress { get; private set; }
@@ -19,6 +23,8 @@ namespace Hwanjo.ElementLab
         public Vector2 AttackOrigin => (Vector2)transform.position + Vector2.up * .62f;
         public bool Grounded => Motor.Grounded;
         public SpriteRenderer Body, Sword;
+        public int MotionRow {get;private set;} = -1;
+        public int MotionFrame {get;private set;}
         float attackTime, dashTime, dashCooldown, hitTime, immunity, externalX, idleClock;
         bool activated;
         Element attackElement;
@@ -29,9 +35,10 @@ namespace Hwanjo.ElementLab
         {
             World = world; Health = world.Tuning.PlayerHealth; Motor = new LabMotor(transform, new Vector2(.48f, .88f));
             capturePoses = System.Array.IndexOf(System.Environment.GetCommandLineArgs(), "-labCaptureActions") >= 0;
+            if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"-labV02Evidence")>=0)capturePoses=false;
             var go = new GameObject("Character body 48px"); go.transform.SetParent(transform, false); Body = go.AddComponent<SpriteRenderer>(); Body.sortingOrder = 25;
-            Sword = LabSprites.Quad("Single sword", transform, new Vector2(.32f, .40f), new Vector2(.70f, .045f), new Color(.85f, .88f, .83f), 26);
-            var hilt = LabSprites.Quad("Sword hilt", Sword.transform, new Vector2(-.36f, 0), new Vector2(.14f, 3), LabSprites.Hex("c2a466"), 27);
+            var weapon=new GameObject("Single sword · grip pivot");weapon.transform.SetParent(transform,false);Sword=weapon.AddComponent<SpriteRenderer>();Sword.sortingOrder=26;
+            if(world.Art)Sword.sprite=world.Art.Sword;
             var collider = gameObject.AddComponent<BoxCollider2D>(); collider.size = Motor.Size; collider.offset = Vector2.up * Motor.Size.y / 2; collider.isTrigger = true;
         }
         public void Tick(float dt, bool allowInput)
@@ -72,12 +79,13 @@ namespace Hwanjo.ElementLab
             if (CurrentAttack != AttackKind.None) speed *= .35f;
             if (dashTime > 0) { speed = Facing * World.Tuning.DashSpeed; dashTime = Mathf.Max(0, dashTime - dt); }
             Motor.Move(dt, speed, World.Tuning.Gravity, externalX); externalX = Mathf.MoveTowards(externalX, 0, 14 * dt);
-            if (transform.position.y < -5) ResetPlayer(new Vector2(0, 0));
+            if (transform.position.y < -5) { if(World.Session && World.Session.Active)World.Session.Respawn();else ResetPlayer(Vector2.zero); }
             idleClock += dt; Render(move);
         }
         public void BeginAttack(AttackKind kind)
         {
             if (!Alive || kind == AttackKind.None || CurrentAttack != AttackKind.None) return;
+            Direction = PreviewDirection;
             CurrentAttack = kind; attackTime = AttackProgress = 0; activated = false; attackElement = Element; action = new ActionContext(); AttackCount++;
             World.InputEvidence(kind + " attack / " + attackElement + " / ActionId=" + action.Id);
         }
@@ -101,17 +109,30 @@ namespace Hwanjo.ElementLab
             else if (Mathf.Abs(move) > .1f) { Pose = "Run"; phase = Mathf.Repeat(idleClock * 9 / 6, 1); }
             else { Pose = "Idle"; phase = Mathf.Repeat(idleClock, 1); }
             var frame = World.Art ? World.Art.Frame(Pose, phase) : null;
+            MotionRow=-1;MotionFrame=Mathf.Clamp((int)(phase*6),0,5);
+            if(CurrentAttack!=AttackKind.None || Input.Held && Grounded)
+            {
+                var dir=CurrentAttack!=AttackKind.None?Direction:PreviewDirection;
+                MotionRow=LabMotion.Row(dir,CurrentAttack==AttackKind.Charged || Input.Held);
+                if(CurrentAttack==AttackKind.Single && !Grounded && dir==SlashDirection.Down)MotionRow=6;
+                if(Input.Held){phase=Input.HeldSeconds>=.5f?.2f:0;MotionFrame=Input.HeldSeconds>=.5f?1:0;}
+                var directional=World.Art?World.Art.DirectionFrame(MotionRow,phase):null;if(directional)frame=directional;
+            }
             Body.sprite = frame ? frame : LabSprites.HeroPlaceholder(Pose, phase); Body.flipX = Facing < 0;
-            if (capturePoses && frame && capturedPoses.Add(Pose + "-" + frame.name)) World.StartCoroutine(World.Capture(Pose + "-" + frame.name));
+            if (capturePoses && frame && capturedPoses.Add(Pose + "-" + frame.name+"-"+Facing)) World.StartCoroutine(World.Capture(Pose + "-" + frame.name+"-"+Facing));
             Body.color = immunity > 0 && (int)(Time.unscaledTime * 18) % 2 == 0 ? new Color(1, .65f, .65f, .7f) : Color.white;
-            Sword.enabled = Alive && Pose != "Death";
-            float angle = Input.Held ? 110 : CurrentAttack != AttackKind.None ? Mathf.Lerp(105, -32, Mathf.Clamp01(AttackProgress * 2)) : -24;
-            Sword.transform.localPosition = new Vector3(Facing * .37f, Input.Held ? .58f : .42f, 0);
+            Sword.enabled = Alive && Pose != "Death" && Pose != "Hit" && Sword.sprite;
+            float angle = MotionRow>=0 ? LabMotion.Angle(MotionRow,MotionFrame) : Pose=="Dash"?-12:-24;
+            Vector2 grip=MotionRow>=0?LabMotion.Grip(MotionRow,MotionFrame):new Vector2(.27f,Pose=="Dash"?.30f:.37f);
+            Sword.transform.localPosition = new Vector3(Facing * grip.x,grip.y,0);
             Sword.transform.localRotation = Quaternion.Euler(0, 0, Facing > 0 ? angle : 180 - angle);
+            Sword.flipY=Facing<0;
+            Sword.sortingOrder=CurrentAttack!=AttackKind.None && Direction==SlashDirection.Down && Grounded?5:26;
             Sword.color = Color.Lerp(new Color(.88f, .89f, .79f), LabSprites.ElementColor(CurrentAttack != AttackKind.None ? attackElement : Element), .4f);
         }
         public void CancelCharge() { Input.Cancel(); }
-        public void Teleport(Vector2 at) { transform.position = at; Motor.Clear(); CancelCharge(); CurrentAttack = AttackKind.None; dashTime = externalX = 0; }
+        public void CancelAttack() { Input.Cancel(); CurrentAttack = AttackKind.None; }
+        public void Teleport(Vector2 at) { transform.position = at; Motor.Clear(); CancelCharge(); CurrentAttack = AttackKind.None; dashTime = externalX = 0; World.SnapCamera(); }
         public void Damage(float damage, float direction)
         {
             if (!Alive || immunity > 0 || dashTime > 0) return;

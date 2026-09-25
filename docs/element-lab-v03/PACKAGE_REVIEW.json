@@ -1,0 +1,63 @@
+{
+  "package": "Hwanjo V2 Element Lab v0.3 — Seamless World",
+  "prepared_at_utc": "2026-09-25T18:17:16.644666+00:00",
+  "scope": "Static package checks only. No access to or execution of the current local Unity project.",
+  "basis": [
+    "User-provided v0.2 completion report and latest feedback",
+    "Previously supplied Hwanjo_V2_ElementLab_V02.zip design and safety instructions"
+  ],
+  "checks": {
+    "expected_markdown_files": true,
+    "utf8_no_bom": true,
+    "no_trailing_whitespace": true,
+    "balanced_code_fences": true,
+    "internal_markdown_links_resolve": true,
+    "single_build_target": true,
+    "branch_consistent": true,
+    "frozen_combat_parameters_present": true,
+    "new_movement_scoped": true,
+    "continuous_world_and_resets_defined": true,
+    "art_integration_not_just_concept": true,
+    "no_executable_launcher_files": true
+  },
+  "broken_relative_links": [],
+  "files": [
+    {
+      "path": "docs/element-lab-v03/00_README.md",
+      "bytes": 5986,
+      "sha256": "c9fc8903fed7e2450b5b8a842febb725efef13560f5e75ebb36c46b2b1f3b5a6"
+    },
+    {
+      "path": "docs/element-lab-v03/01_CODEX_IMPLEMENT.md",
+      "bytes": 11629,
+      "sha256": "5d323fb5f7ebab6ba5b89efdbc4460cded976bda9efd7c21d22cfa5beb201cdc"
+    },
+    {
+      "path": "docs/element-lab-v03/02_LEVEL_AND_MOVEMENT.md",
+      "bytes": 12942,
+      "sha256": "697a516a96b1408759ce931968bb22c7cf17b79a4d00d0408ab516b8577b8934"
+    },
+    {
+      "path": "docs/element-lab-v03/03_ART_AND_CAMERA.md",
+      "bytes": 10773,
+      "sha256": "6702a9bcfc800c750ce47650e643b92239b0cc35efdd6c77addf9ce37d3b329a"
+    },
+    {
+      "path": "docs/element-lab-v03/04_QA_AND_HANDOFF.md",
+      "bytes": 11080,
+      "sha256": "b3b2741810dd3f4a53f9070fc56545306b3c4978d106ff11ec990b8d8e48a7d0"
+    }
+  ],
+  "not_validated": [
+    "Local source and scenes",
+    "Unity compile/tests/build",
+    "Wall-jump tuning and gate reachability",
+    "Asset quality and license status of future generated resources",
+    "Runtime camera, parallax, performance and game feel"
+  ],
+  "notes": [
+    "Fixed v03 branch and build paths; older v02 files are historical references only.",
+    "Geometry and wall-movement values are prototype proposals, not team-wide final decisions.",
+    "No code, scripts, generated images or font binaries included."
+  ]
+}

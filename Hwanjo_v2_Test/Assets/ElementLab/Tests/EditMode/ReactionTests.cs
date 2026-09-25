@@ -155,11 +155,11 @@ namespace Hwanjo.ElementLab.Tests
         [Test] public void CancelDiscardsHeldInputAndAirCannotCharge()
         {
             var input = new AttackInput(); input.Press(true); input.Tick(1); input.Cancel(); Assert.AreEqual(AttackKind.None, input.Release(true));
-            input.Press(false); input.Tick(1); Assert.AreEqual(AttackKind.Single, input.Release(false));
+            input.Press(false); input.Tick(1); Assert.AreEqual(AttackKind.None, input.Release(false));
         }
         [Test] public void ChargeRangeIsWholeReachFromSameOrigin()
         {
-            var tuning = ScriptableObject.CreateInstance<LabTuning>(); Assert.AreEqual(1.75f * tuning.Range, tuning.ChargeRange);
+            var tuning = ScriptableObject.CreateInstance<LabTuning>(); Assert.AreEqual(tuning.Range, tuning.ChargeRange);
             Assert.LessOrEqual((tuning.TraceCenterR + tuning.TraceWidthR / 2) * tuning.Range, tuning.Range);
             Object.DestroyImmediate(tuning);
         }

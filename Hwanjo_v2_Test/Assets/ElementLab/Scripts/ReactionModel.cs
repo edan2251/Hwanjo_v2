@@ -35,13 +35,13 @@ namespace Hwanjo.ElementLab
         public bool Has(Trait trait) => (Traits & trait) != 0;
         public string Validate(TargetState state)
         {
-            if (state.Burning && state.Frozen) return "Burning + Frozen cannot coexist.";
-            if (state.Liquid && state.Frozen) return "Liquid + Frozen cannot coexist.";
-            if (state.Burning && state.Moisture == Moisture.Wet) return "Burning + Wet cannot coexist.";
-            if (state.Burning && !Has(Trait.Flammable)) return "Burning requires Flammable.";
-            if (state.Frozen && !Has(Trait.Freezable)) return "Frozen requires Freezable.";
-            if (state.Liquid && !LiquidBody) return "Liquid requires the Water material/profile.";
-            if (state.Moisture != Moisture.None && !Has(Trait.Wettable)) return "Dry/Wet requires Wettable.";
+            if (state.Burning && state.Frozen) return "연소와 동결을 동시에 적용할 수 없습니다.";
+            if (state.Liquid && state.Frozen) return "물과 동결을 동시에 적용할 수 없습니다.";
+            if (state.Burning && state.Moisture == Moisture.Wet) return "연소와 젖음을 동시에 적용할 수 없습니다.";
+            if (state.Burning && !Has(Trait.Flammable)) return "연소에는 가연성 특성이 필요합니다.";
+            if (state.Frozen && !Has(Trait.Freezable)) return "동결에는 동결 가능 특성이 필요합니다.";
+            if (state.Liquid && !LiquidBody) return "물 상태에는 물 재질이 필요합니다.";
+            if (state.Moisture != Moisture.None && !Has(Trait.Wettable)) return "건조/젖음에는 젖음 가능 특성이 필요합니다.";
             return "";
         }
         public static TargetProfile For(Preset preset)
@@ -251,7 +251,7 @@ namespace Hwanjo.ElementLab
     public enum AttackKind { None, Single, Charged }
     public sealed class AttackInput
     {
-        public const float ChargeThreshold = .5f, ChargeRatio = 1.75f;
+        public const float ChargeThreshold = .5f, ChargeRatio = 1f;
         public bool Held { get; private set; }
         public float HeldSeconds { get; private set; }
         bool groundStart;
@@ -261,7 +261,8 @@ namespace Hwanjo.ElementLab
         public AttackKind Release(bool grounded)
         {
             if (!Held) return AttackKind.None;
-            var result = groundStart && grounded && HeldSeconds + .000001f >= ChargeThreshold ? AttackKind.Charged : AttackKind.Single;
+            var result = HeldSeconds + .000001f >= ChargeThreshold
+                ? (groundStart && grounded ? AttackKind.Charged : AttackKind.None) : AttackKind.Single;
             Cancel(); return result;
         }
     }

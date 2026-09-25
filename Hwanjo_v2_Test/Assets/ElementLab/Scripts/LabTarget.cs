@@ -17,6 +17,7 @@ namespace Hwanjo.ElementLab
         public TraceSlot Trace;
         public string LastEffect = "—";
         public bool PuzzleRope;
+        public Element? MaterialSource;
         public float PushVelocity, Spin, Flash;
         public int EnemyPhase { get; private set; }
         public float EnemyPhaseTime { get; private set; }
@@ -40,17 +41,23 @@ namespace Hwanjo.ElementLab
             RefreshSolid();
         }
         public Reaction Receive(ActionContext action, Effect effect, float damage, float direction)
+            => Receive(action, effect, damage, Vector2.right * direction);
+        public Reaction Receive(ActionContext action, Effect effect, float damage, Vector2 direction)
         {
+            if(MaterialSource.HasValue && effect==Effect.WindImpulse && !Model.State.Burning)
+            {var no=Reaction.None(Model.State,"WrongState:MaterialMissing");World.Record(this,action,effect,no);return no;}
             if (Trace != null && !Trace.CanReceive(action, effect, out string blocked))
             { var no = Reaction.None(Model.State, blocked); World.Record(this, action, effect, no); return no; }
-            var r = Model.Receive(action, effect, damage); LastEffect = effect.ToString();
+            var r = Model.Receive(action, effect, damage); LastEffect = LabKorean.EffectName(effect);
             if (r.Reason == "RehitBlocked") return r;
             World.Record(this, action, effect, r);
             if (damage > 0 && r.Reason != "WrongState:Inactive") { Flash = World.GameFeel ? World.Tuning.HitFlash : 0; World.Impact(action, transform.position + Vector3.up * .5f, r.Applied, effect); }
-            if (r.Consequence == Consequence.Push) { PushVelocity = direction * World.Tuning.PushSpeed; if (Kind == TargetKind.Enemy) Motor.Velocity = new Vector2(0, World.Tuning.PushLift); }
+            if (r.Consequence == Consequence.Push) { PushVelocity = direction.x * World.Tuning.PushSpeed; if (Kind == TargetKind.Enemy) Motor.Velocity = new Vector2(0, World.Tuning.PushLift); }
             if (r.Consequence == Consequence.Rotate) Spin += 100;
             if (r.Consequence == Consequence.Freeze && Kind == TargetKind.Enemy) { EnemyPhase = 0; EnemyPhaseTime = 0; }
             Trace?.React(r, action, direction);
+            if(MaterialSource.HasValue && r.Consequence==Consequence.Transport)
+            {World.SendMaterial(MaterialSource.Value,(Vector2)transform.position+Vector2.up*Size.y/2,direction,action);gameObject.SetActive(false);}
             RefreshSolid(); return r;
         }
         public void Tick(float dt)
@@ -58,7 +65,8 @@ namespace Hwanjo.ElementLab
             if (Trace != null) return;
             bool wasAlive = Model.Alive; bool wasBurning = Model.State.Burning;
             Model.Tick(dt); Flash = Mathf.Max(0, Flash - dt);
-            if (wasBurning && !Model.State.Burning && Model.Consumed) World.RecordTimer(this, "EL10 · fuel exhausted");
+            if(MaterialSource.HasValue && !Model.State.Burning && Model.State.Moisture!=Moisture.Wet)Model.Reset();
+            if (wasBurning && !Model.State.Burning && Model.Consumed) World.RecordTimer(this, "연료 소진 · 소실");
             if (PuzzleRope && wasAlive && !Model.Alive) World.OpenBridge();
             if (!Model.Alive) { Body.color = new Color(.35f, .45f, .4f, .2f); HitCollider.enabled = SolidCollider.enabled = false; stateIcon.color = Color.clear; return; }
             float self = 0;
@@ -113,16 +121,23 @@ namespace Hwanjo.ElementLab
             if (Trace != null) return;
             bool platform = Kind == TargetKind.Water && Model.State.Frozen || Kind == TargetKind.Box || Kind == TargetKind.Dummy && !Model.Profile.LiquidBody || Kind == TargetKind.Vine;
             SolidCollider.enabled = Trace == null && Model.Alive && platform;
-            if (Kind == TargetKind.Water) { SolidCollider.size = new Vector2(Size.x, .15f); SolidCollider.offset = new Vector2(0, Size.y); }
+            if (Kind == TargetKind.Water)
+            {
+                SolidCollider.size = new Vector2(Size.x, .15f); SolidCollider.offset = new Vector2(0, Size.y - .075f);
+                HitCollider.size = new Vector2(Size.x, .16f); HitCollider.offset = new Vector2(0, Size.y - .04f);
+                Body.sprite = LabSprites.WaterSurface(Model.State.Frozen);
+                Body.transform.localScale = new Vector3(Size.x, Size.y, 1);
+            }
         }
         public void Apply(TargetProfile profile, TargetState state)
-        { Model.Apply(profile, state); ResetTransform(); World.RecordTimer(this, "Debug Apply · reset timers / motion / history"); }
+        { Model.Apply(profile, state); ResetTransform(); World.RecordTimer(this, "설정 적용 · 시간 / 이동 / 반응 이력 초기화"); }
         public void ResetTarget() { Model.Reset(); ResetTransform(); }
         public void DefaultPreset() { Model.Apply(initialProfile, initialState, Kind == TargetKind.Enemy ? World.Tuning.EnemyHealth : 100, Kind == TargetKind.Enemy || Kind == TargetKind.Dummy || Kind == TargetKind.Box); ResetTransform(); }
         void ResetTransform()
         {
+            gameObject.SetActive(true);
             transform.position = Spawn; Motor.Clear(); PushVelocity = Spin = Flash = 0; EnemyPhase = 0; EnemyPhaseTime = 0; EnemyHits = 0;
-            LastEffect = "—"; Body.color = Color.white; Body.transform.localRotation = Quaternion.identity; Body.transform.localPosition = Vector3.zero; stateIcon.color = Color.clear; HitCollider.enabled = true; RefreshSolid();
+            LastEffect = "—"; Body.color = Color.white; Body.transform.localRotation = Quaternion.identity; Body.transform.localPosition = MaterialSource.HasValue ? Vector3.up * Size.y / 2 : Vector3.zero; stateIcon.color = Color.clear; HitCollider.enabled = true; RefreshSolid();
         }
     }
 }

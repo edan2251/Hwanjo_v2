@@ -43,7 +43,7 @@ namespace Hwanjo.ElementLab.Tests
             world.ExecuteAttack(world.Player, AttackKind.Single, Element.Water, new ActionContext());
             Assert.That(world.LastAttackReach, Is.EqualTo(world.Tuning.Range).Within(.0001));
             world.ExecuteAttack(world.Player, AttackKind.Charged, Element.Water, new ActionContext());
-            Assert.That(world.LastAttackReach, Is.EqualTo(world.Tuning.Range * 1.75f).Within(.0001));
+            Assert.That(world.LastAttackReach, Is.EqualTo(world.Tuning.Range).Within(.0001));
             Assert.LessOrEqual(world.Trace.Target.HitCollider.bounds.max.x, world.Player.AttackOrigin.x + world.Tuning.Range + .001f);
             world.ExecuteAttack(world.Player, AttackKind.Single, Element.Ice, new ActionContext()); yield return null;
             Assert.AreEqual(Element.Ice, world.Trace.Element); Assert.IsTrue(world.Trace.Platform); Assert.IsTrue(world.Trace.Target.SolidCollider.enabled);
@@ -118,7 +118,7 @@ namespace Hwanjo.ElementLab.Tests
         [UnityTest] public IEnumerator DummyApplyRejectsContradictionsAndResetRemembersLastApply()
         {
             world.Hud.LoadPreset((int)Preset.WetVine); world.Hud.DraftDry = true;
-            Assert.IsFalse(world.Hud.ApplyDraft()); Assert.That(world.Hud.ValidationMessage, Does.Contain("Dry + Wet"));
+            Assert.IsFalse(world.Hud.ApplyDraft()); Assert.That(world.Hud.ValidationMessage, Does.Contain("건조 + 젖음"));
             world.Hud.DraftDry = false; Assert.IsTrue(world.Hud.ApplyDraft());
             world.Dummy.Receive(new ActionContext(), Effect.Heat, 10, 1); Assert.AreEqual(Moisture.Dry, world.Dummy.Model.State.Moisture);
             world.Dummy.ResetTarget(); Assert.AreEqual(Moisture.Wet, world.Dummy.Model.State.Moisture); Assert.AreEqual(100, world.Dummy.Model.Health);

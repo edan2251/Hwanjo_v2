@@ -1,3 +1,21 @@
+# Element Lab v0.2 인계 — 2026-09-26 KST
+
+**PASS — A/B/C 구현·필수 기능/아트 자체 검증·Windows 빌드 완료 후 여기서 멈춘다.** 브랜치 `prototype/element-lab-v01`, 시작 HEAD `76deb8db4d5bec223cb98657596b2c0c4d0e56ba` 유지. Git 기록/원격 변경 없음. 아래 v0.1 기록은 과거 이력으로 보존한다.
+
+- 실행: `Builds/ElementLabV02/HwanjoElementLab.exe`와 폴더 전체. 기존 씬 `Assets/ElementLab/Scenes/ElementLab.unity`.
+- A: 기본/차지1R, 좌우·상하 베기, 노출 수면 아래 베기, 가까운 세계좌표 검흔/2초/한 슬롯, 실제 한글 반응표와 실험실 재료 비교.
+- B: 본선6/비밀2, 물→얼음→E02 재방문→바람→성소 지름길, 체크포인트/방 리셋/모드 복귀/방문 지도. 전체 실제 입력 재생75검사 통과. E05/E06/E02의 왕복 지형 문제를 실제 재생으로 찾아 수정했다.
+- C: 검1장, 방향6계열36프레임+공중 아래6프레임, 플랫폼 타일, 다른 그림의3층 배경, 댐핑 연결. 실제 연속 프레임 열람. S01/낮은 물가가 HUD에 가려지는 문제를 시각 검수로 찾아 카메라 하단-3.7로 수정했다.
+- 최신 XML: `32-final-edit`41/41, `26-visibility-play`38/38, fail0 skip0 exit0. 최종 `27-visibility-build`errors0/warnings0/exit0. 카메라 수정 뒤 `28-visibility-route`63검사/PNG90개, `29-camera-final-1080`6검사/PNG197개 PASS. 실제8방과 시간순 화면을 열었다.
+- `31-native-ui-1080`: 실제 Windows 한글 메뉴·더미 드롭다운/적용/거부/Reset·반응표·모드·지도·방/전체 초기화 클릭, 게임키 누출 차단, 메뉴 종료0. 직접 긴 누르기의 한계와 자동 입력 범위를 `V02_VALIDATION.md`에 구분했다.
+- `30-performance`: 무캡처3초 표본마다 타깃30/60/120의 실측30.0/60.0/119.9FPS, 이동·단타6검사 PASS. 장시간 성능 보장은 아니다. 마지막 Unity/Player 남은 프로세스0개.
+- 모든 근거 `artifacts/element-lab-v02/20260925T233641+0900/`. 기존 원본/요청 패키지/Skill/AGENTS/v0.1 빌드 등 보호231파일 해시 동일. ProjectSettings/Packages 변경 없음.
+- 기존 종료 ComputeBuffer 경고의 원인/장기 영향은 미확정. 인간10~15분 플레이 시간·손맛·최종 미술 취향 승인은 별도다.
+
+시작은 README의 조작 안내와 `docs/V02_LEVEL_DESIGN.md` 동선을 따른다. 불→E03 물→E05 얼음→E02 물길 재방문→E06 바람→E01 지름길. E 상호작용, M 방문 지도, R 방 리셋, 메뉴의 탐험 처음부터는 전체 세션 초기화다. 프로그램 종료 후 디스크 저장은 없다.
+
+상세 지원표/시험안/검증 한계는 `V02_VALIDATION.md`, 변경 목적은 `V02_CHANGELOG.md`, 아트 출처/재사용/간단 표식은 `ART_ASSET_MANIFEST.md`. 문·제단·비석은 색면 표식으로 남았으며 필수 검/캐릭터/플랫폼/3층 배경은 실제 게임 자산이다. 다음 작업은 새 사용자 요청에서 시작한다. 사람이 평가할 질문은 네 방향 충분성, 가까운 검흔의 선택 가치와 입력 부담, 재방문 단서·그림·카메라의 가독성이다.
+
 # Hwanjo v2 — Element Lab v0.1 인계
 
 2026-09-25 KST. **PASS — 구현·검증·Windows 빌드 완료 후 여기서 멈춘다.** 사용자/팀 아트 승인과 사람의 플레이 평가는 별도다. 브랜치 `prototype/element-lab-v01`, HEAD `7541ea07655be761d5bb399da17b85b8029d8e8d` 유지. Git add/commit/push/브랜치 변경 없음.

@@ -10,6 +10,7 @@ import sys
 parser = argparse.ArgumentParser()
 parser.add_argument("--run-dir", required=True)
 parser.add_argument("--label", required=True)
+parser.add_argument("--player", help="Run an existing workspace player instead of the Editor")
 parser.add_argument("unity_args", nargs=argparse.REMAINDER)
 args = parser.parse_args()
 root = Path(__file__).resolve().parents[2]
@@ -18,6 +19,10 @@ run.relative_to(root / "artifacts")
 run.mkdir(parents=True, exist_ok=True)
 editor = Path(r"C:\Program Files\Unity\Hub\Editor\6000.3.23f1\Editor\Unity.exe")
 command = [str(editor), "-projectPath", str(root / "Hwanjo_v2_Test"), "-logFile", str(run / (args.label + ".editor.log"))]
+if args.player:
+    player = (root / args.player).resolve()
+    player.relative_to(root / "Builds")
+    command = [str(player), "-logFile", str(run / (args.label + ".editor.log"))]
 command += args.unity_args[1:] if args.unity_args[:1] == ["--"] else args.unity_args
 record = {"command": command, "startedAt": datetime.datetime.now().astimezone().isoformat(), "exitCode": None}
 print("Starting Unity: " + args.label, flush=True)

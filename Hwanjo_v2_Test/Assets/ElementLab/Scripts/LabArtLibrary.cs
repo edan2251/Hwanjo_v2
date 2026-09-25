@@ -9,6 +9,14 @@ namespace Hwanjo.ElementLab
     public sealed class LabArtLibrary : ScriptableObject
     {
         public Sprite Background;
+        public Sprite Sword, Far, Middle;
+        public Sprite[] Terrain;
+        public PoseStrip[] Directional;
+        public Sprite DirectionFrame(int row,float phase)
+        {
+            if(Directional==null || row<0 || row>=Directional.Length || Directional[row].Frames.Length==0)return null;
+            var frames=Directional[row].Frames;return frames[Mathf.Clamp((int)(phase*frames.Length),0,frames.Length-1)];
+        }
         public PoseStrip[] Poses;
         public Sprite Frame(string pose, float phase)
         {
@@ -36,6 +44,29 @@ namespace Hwanjo.ElementLab
             }
         }
         public static Color ElementColor(Element e) => e == Element.Fire ? new Color(1, .40f, .18f) : e == Element.Water ? new Color(.2f, .64f, 1) : e == Element.Wind ? new Color(.58f, .96f, .79f) : new Color(.73f, .9f, 1);
+        public static Sprite WaterSurface(bool frozen)
+        {
+            string key = frozen ? "frozen-surface" : "liquid-surface";
+            if (cache.TryGetValue(key, out var sprite)) return sprite;
+            var p = new PixelCanvas(48, 48);
+            p.Rect(0, 0, 48, 48, frozen ? Hex("568c9d") : new Color(.16f,.39f,.46f,.6f));
+            p.Rect(0, 44, 48, 4, frozen ? Hex("d9f4ef") : Hex("79c7ca"));
+            for (int x = 0; x < 48; x += 12)
+                if (frozen) p.Line(x, 44, x + 7, 24, Hex("8ed4d8"), 2);
+                else p.Rect(x, 30 + x % 5, 7, 2, Hex("48999d"));
+            sprite = p.Sprite(key); cache[key] = sprite; return sprite;
+        }
+        public static Sprite TraceGlyph(Element element,bool platform)
+        {
+            string key="trace-glyph-"+element+platform;if(cache.TryGetValue(key,out var sprite))return sprite;
+            var p=new PixelCanvas(48,48);Color c=Color.white;
+            if(platform){p.Rect(1,4,46,37,new Color(.65f,.83f,.92f));p.Rect(0,41,48,5,c);for(int i=4;i<48;i+=12)p.Line(i,39,i+6,12,c,2);}
+            else if(element==Element.Water){p.Circle(24,24,17,c);p.Circle(24,26,14,Color.clear);p.Circle(17,29,3,c);p.Circle(36,10,3,c);}
+            else if(element==Element.Fire){p.Line(12,10,17,28,c,5);p.Line(23,8,25,41,c,6);p.Line(33,10,37,31,c,4);p.Line(17,17,32,14,c,6);}
+            else if(element==Element.Wind){p.Line(4,14,38,19,c,2);p.Line(12,25,44,29,c,2);p.Line(7,34,31,39,c,2);}
+            else {p.Line(24,4,24,44,c,3);p.Line(4,24,44,24,c,3);p.Line(11,11,37,37,c,2);p.Line(11,37,37,11,c,2);}
+            var raw=p.Sprite(key);sprite=Sprite.Create(raw.texture,new Rect(0,0,48,48),Vector2.one*.5f,48);cache[key]=sprite;return sprite;
+        }
         public static Sprite Prop(string kind)
         {
             if (cache.TryGetValue(kind, out var sprite)) return sprite;

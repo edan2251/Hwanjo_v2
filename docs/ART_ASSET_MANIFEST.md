@@ -1,3 +1,29 @@
+# Element Lab v0.2 아트 기록
+
+2026-09-26. v0.1 원본/생성 아트는 그대로 보존하고 `Assets/ElementLab/Art/V02/`에 추가했다. 아래의 기술 연결과 자체 시각 검토는 팀의 최종 미술 승인과 구분한다. 전체 검증 근거는 `V02_VALIDATION.md`를 따른다.
+
+## 새 자산과 실제 연결
+
+내장 이미지 생성 도구 6회, 산출물당 1회(제안 상한 총10회/동일2회 이내). 기존 캐릭터/배경 시트와 원본 5장을 열어 검은 묶음머리·붉은 스카프·남색/아이보리, 청록 숲·유적 분위기를 참조했다. 사용자 원본 설명판을 게임 셀로 잘라 쓰지 않았다. 외부 유료 API·설치는 없다. 생성 원본/가공 JSON/확대 검수본은 `artifacts/element-lab-v02/20260925T233641+0900/art-source/`, 프롬프트는 같은 실행 폴더 `art-prompts.md`다.
+
+| V02 파일 | 규격/피벗 | 실제 사용 |
+|---|---|---|
+| HeroDirections.png | 288×288 RGBA, 48×48 셀36개, PPU48, pivot(24,2px) | 수평/위/지상 아래 단타·차지 6계열×6프레임. 2준비/2접촉/2회수. 왼쪽은 몸/손/검 모두 반전 |
+| AirDown.png | 288×48 RGBA, 48×48 셀6개, 동일 PPU/발 기준 | 공중 아래 단타의 접힌 다리·낮은 손. 급강하/반동 없음 |
+| Sword.png | 56×11 RGBA, PPU48, grip pivot(8,7.5px) | 모든 속성이 공유하는 검 하나. LabMotion의 방향별 손 앵커와 각도에 연결 |
+| FarRuins.png | 1672×941, 중앙 pivot | 산·안개·먼 누각 원경, 이동계수0.15 |
+| MiddleForest.png | 1672×941 RGBA, 중앙 pivot | 투명 숲·석문 중경, 이동계수0.4 |
+| Terrain0~6.png | 각각32×32, 중앙 pivot | 이끼 석재 상면/좌우끝/중앙/아래 모서리. collider 외곽으로 잘라 배치 |
+| Terrain7.png | 32×32 RGBA, 중앙 pivot | 비충돌 가지·풀 근경, 이동계수0.7 |
+
+Point/무압축/mipmap OFF. 몸체는 공통 축척·발 정렬·alpha128로 기계적 분리했고 셀별 bounds/해시를 보존했다. 검은 생성 원본을 crop/nearest 축소했다. Terrain은 4×2 원본의 셀 경계 내 그림을32×32로 맞췄다. Editor/LabV02ArtImport가 .meta와 LabArt.asset 참조를 생성하며 기존 GUID는 유지했다.
+
+기존 Idle/Run/Jump/Fall/Dash/Hit/Death는 기존 생성 아트를 재사용한다. 공격 준비·접촉·회수는 새 몸 포즈와 별도 검 한 장을 결합한다. 차지 대기는 해당 방향 차지의 첫2프레임이다. 몸 collider/Transform은 회전하지 않는다. 지상 아래 공격의 땅 밑 검날은 지형 뒤로 가리고, 피격/죽음에는 무기를 숨긴다.
+
+물결/방울·불꽃·바람선·서리 결정과 밟을 수 있는 얼음 상면은 `LabSprites.TraceGlyph`/`WaterSurface`의 코드 픽셀 그래픽이다. 기존 환경 기믹/적 그림도 재사용한다. 이는 명시적인 간결한 표현이며 신규 주인공·검·지형·배경 대신 숨겨 둔 fallback이 아니다. 배포 씬에는 생성 몸체/검/플랫폼/거리층이 모두 연결된다. 문·제단·기록 비석은 작은 색면 표식으로 남긴 프로토타입 표현이다.
+
+최종 자체 검수는 `before-after-lab.png`, 좌우 `verified-motion-1.png`/`verified-motion--1.png`, `scroll-E05-chronological.png`, `camera-final-chronological.png`, `eight-rooms-final.png`와 각 원본 PNG를 실제 열어 수행했다. 처음 발견한 S01/낮은 수면의 HUD 가림을 카메라 경계로 수정하고 최종 빌드 화면에서 다시 확인했다. VFX OFF에서도 실제 검이 보이고, 모든 방향 준비/접촉/회수와 플랫폼 외곽/착지면, 이동하는3층 배경을 확인했다. 1366×768 및1920×1080에서 필수 아트 연결 자체 검수 PASS이며 사람의 최종 미술 승인은 별도다.
+
 # Element Lab v0.1 아트 기록
 
 2026-09-25. 현재 게임용 신규 리소스이며 팀의 최종 아트 승인은 별도다. 사용자 원본과 요청 문서는 수정하지 않았다.

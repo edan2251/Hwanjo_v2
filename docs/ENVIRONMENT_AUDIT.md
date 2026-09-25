@@ -123,3 +123,26 @@ manifest의 모든 직접 의존성과 lock 버전에 불일치가 없다. 승�
 추적 파일 바이트 비교에서 변경은 루트 `.gitignore`, `README.md`뿐이다. Unity Import 후 `Assets`·`Packages`·`ProjectSettings` 추적 파일 변경과 추가 원본 파일은 없다. 사용자 요청서의 해시도 동일하다. 기존 v1을 조사·복사·수정하지 않았으며 게임 코드·씬·아트·야간 실행기를 만들지 않았다. Git add/commit/push 등은 실행하지 않았다.
 
 환경 진단은 완료됐으나 다음 구현은 새 사용자 요청이 있어야 시작한다. 구현별 미정사항은 [PROTOTYPE_SCOPE.md](PROTOTYPE_SCOPE.md)에 유지하고 다음 시작점은 [HANDOFF.md](HANDOFF.md)에 기록한다. 향후 샌드박스 안에서 Unity를 실행하면 같은 권한 차단이 재발할 수 있으며, 이번 승인으로 전역 실행 권한이 바뀐 것은 아니다.
+
+## Element Lab v0.2 실행 기록 — 2026-09-25~26
+
+사용자가 `docs/element-lab-v02/04_CODEX_IMPLEMENT.md`의 A→B→C와 통합 검증을 새로 승인했다. 위 Step 0 기록은 당시 결과이며 재실행하지 않았다. 실제 브랜치 `prototype/element-lab-v01`, HEAD `76deb8db4d5bec223cb98657596b2c0c4d0e56ba`에서 시작했고 유지했다. 시작 staged/unstaged/untracked는 비어 있었다.
+
+기존 Unity6000.3.23f1, 설치된 Windows 빌드 지원과 Python 캐시 실행 파일을 사용했다. PATH Python 호출 실패 뒤 설치 없이 기존 실행 파일을 선택했다. `tools/element-lab/invoke_unity.py`의 작은 `--player` 확장으로 빌드 Player도 stdout/stderr/종료코드를 분리해 남겼다. Unity 캐시·라이선스 접근은 필요한 명령별 sandbox 승인을 받아 실행했고 전역 정책·인증·패키지·OS를 바꾸지 않았다. Editor/Player는 동시에 하나만 실행했다.
+
+근거 폴더: `artifacts/element-lab-v02/20260925T233641+0900/`. 각 실행의 `.result.json`에 전체 명령·시각·PID·실제 종료코드가 있으며 Editor 로그의 라이선스/세션 필드5개를 가렸다. 실패와 렌더 FAIL도 보존했다. `runs-summary.json`은 색인이고 상세 판정은 [V02_VALIDATION.md](V02_VALIDATION.md)다.
+
+| 마지막 실제 실행 | 결과 |
+|---|---|
+| 32-final-edit / 26-visibility-play | EditMode41/41, PlayMode38/38, 각각 fail0/skip0/exit0 |
+| 27-visibility-build | Windows Succeeded, errors0/warnings0/exit0, `Builds/ElementLabV02/HwanjoElementLab.exe`와 폴더 전체 |
+| 24-delivery-render / 28-visibility-route | 전체75검사/PNG183개 후 카메라 수정 버전 탐험63검사/PNG90개, 모두 PASS/exit0 |
+| 29-camera-final-1080 | 1920×1080 댐핑 ON/OFF 실제 이동6검사/PNG197개, PASS/exit0 |
+| 30-performance | 1366×768 무캡처3초 표본, 타깃30/60/120에 실측30.0/60.0/119.9FPS. 이동·단타6검사 PASS/exit0 |
+| 31-native-ui-1080 | Windows 키/마우스 메뉴·더미·지도·확인창 직접 검증, 메뉴 종료0 |
+
+최종 캡처의8방/좌우 방향 모션/시간순 이동을 실제 열어 검수했다. S01 발밑 HUD 가림을 발견하고 카메라를 수정한 뒤 렌더 재확인했다. 기술 테스트만으로 아트 완료를 판정하지 않았다. 네이티브 도구의 지속 키 유지 한계는 자동 InputSystem 재생과 구분해 문서화했다. 최소1366×768 및1920×1080 외 화면/다른 PC/장시간 성능/사람의 최종 미술 승인은 미검증이다.
+
+마지막01:39 KST Unity/게임 남은 프로세스0개. 기존 ComputeBuffer 종료 경고는 남고 원인/장기 영향은 미확정이다. 최종 Player에서 새 Exception/Native Crash는 발견하지 못했다. Editor의 기존 라이선스 초기 진단은 성공 빌드의 errors0/warnings0과 별도다. UI 도중 외부 git.exe 오류 창은 앱 접근 승인 시간 초과로 조작하지 못했으며 나중에 외부에서 사라졌다. 그 창의 문제를 해결했다고 보고하지 않는다.
+
+`protected-hashes-final.json`의 보호231파일은 모두 시작 해시와 동일하다. 원본 PNG5장/기존 아트·메타/v0.1 빌드/요청 문서/AGENTS/Skill/ProjectSettings/Packages를 보존했다. ProjectSettings·Packages diff 없음. 새 V02 메타와 LabArt 참조만 의도적으로 import했으며 메타 누락0개다. `git diff --check` 종료0, 줄바꿈 경고는 stderr로 분리했다. Git add/commit/push/브랜치·원격 변경 없이 결과를 unstaged/untracked로 남긴다. 정확한 파일 목록과 전체 diff는 RUN의 `git-status-final.stdout.txt`/`git-diff-final.stdout.txt`다.
